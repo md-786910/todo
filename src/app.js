@@ -64,7 +64,7 @@ app.use(passport.session());
 
 
 // set passport
-app.get('/', (req, res) => res.render('googleauth'))
+app.get('/', (req, res) => res.render('index'))
 app.get('/failed', (req, res) => res.send('You Failed to log in!'))
 
 // In this route you can see that if the user is logged in u can acess his info in: req.user
