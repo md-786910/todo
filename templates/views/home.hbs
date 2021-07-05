@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <meta charset="UTF-8">
+            <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Todo App</title>
+    </head>
+    <body>
+          {{>header}}
+        <div class="h_add_todo">
+
+            <div class="yourListItem">
+                <p>
+                    Your Items.
+                </p>
+            </div>
+        </div>
+
+        <!-- card -->
+        <div class="allCard">
+            {{!-- add some --}}
+            {{#each data}}
+              <div class="card">
+    <div class="title">
+        <h3><b>title:</b></h3>
+        <p>{{this.title}}</p>
+    </div>
+    <div class="desc">
+        <h3><b>desc:</b></h3>
+        <p>{{this.desc}}.</p>
+    </div>
+    <div class="date">
+        {{this.date}}
+    </div>
+    <div class="btn">
+        <form action="/delete" method="post">
+        <button class="Delete" name="delete" value="{{this.id}}" onclick="this.form.submit"><img class="event" src="./image/delete.png"></button>
+        </form>
+     <form action="/edit" method="post">
+            <button class="Edit"  name="edit" value="{{this.id}}"  onclick="this.form.submit"><a href="/"><img class="event" src="./image/edit.png"></a></button>
+     </form>
+    </div>
+    </div>
+    
+    {{/each}}
+            {{!-- end --}}
+        </div>
+
+        <!-- add to card -->
+            <div class="addToCard">
+        <a href="/add" >
+            <img class="addIcon" src="./image/google-plus.png" alt="add" title="Add">
+        </a>
+        </div>
+      
+
+        <div>
+        </div>
+            {{!-- {{json}} --}}
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{!-- <script src="./js/client.js"></script> --}}
+</html>

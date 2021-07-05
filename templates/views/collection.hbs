@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./css/style.css">
+        <meta charset="UTF-8">
+            <link rel="shortcut icon" href="./image/icon.png" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add Todo</title>
+    </head>
+    <body>
+{{>header}}
+        <div class="h_add_todo">
+
+            <div class="yourListItem">
+                <p>
+                    Add Todo.
+                </p>
+            </div>
+        </div>
+
+        <form action="/send" id="form_container" method="post">
+            <div class="inputField">
+                <input type="text" name="title" value="{{title}}" id="inputtitle" placeholder="Add
+                    Title"
+                    required>
+                <input type="text" name="desc" value="{{desc}}" id="inputdesc" placeholder="Add
+                    Desc"
+                    required>
+
+                <input type="submit" value="Add" id="submit" >
+            </div>
+        </form>
+    </body>
+    <script src="./js/client.js"></script>
+        {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    
+</html>

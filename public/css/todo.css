@@ -1,0 +1,36 @@
+.search_todo h2{
+    margin-top: 50px;
+    font-size:40px;
+    font-weight:100;
+    text-decoration: underline;
+text-align: center;
+}
+.form-search{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+align-items:center;
+}
+#searchBtn{
+    width:10% !important;
+    background-color: green;
+    font-weight:100;
+    font-size: 20px;
+}
+#search{
+    outline: none;
+    width:40%;
+    height:2.5em;
+    font-size:15px;
+    font-weight:100;
+}
+.sameForBoth{
+    /* margin: 10px; */
+    width:20%;
+}
+pre{
+    color: green;
+}
